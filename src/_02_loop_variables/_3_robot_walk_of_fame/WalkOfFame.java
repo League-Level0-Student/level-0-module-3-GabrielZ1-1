@@ -6,13 +6,38 @@ import org.jointheleague.graphical.robot.Robot;
 public class WalkOfFame {
 	public static void main(String[] args) {
 		Robot rob = new Robot();
-		
+
 		// 1. Set the X position of the robot so that it starts on the left. 
 		// You also need to show the robot to see the result of this line.
-
+		rob.setX(50);
 		// 2. Make the robot draw a star shape. Hint: angle=144.
+		rob.penDown();
+		rob.setSpeed(30);
+
+		rob.setAngle(144);
 
 		// 3. Set the length of each line in the star to 30.
+
+		rob.move(30);
+
+		rob.setAngle(144*2);
+
+		rob.move(30);
+
+		rob.setAngle(144*3);
+
+		rob.move(30);
+
+		rob.setAngle(144*4);
+
+		rob.move(30);
+
+		rob.setAngle(144*5);
+
+		rob.move(30);
+
+		rob.penUp();
+
 
 		/** THE CHALLENGE: **/
 		/*
@@ -20,6 +45,43 @@ public class WalkOfFame {
 		 * 
 		 * Hint: The distance between stars is 50.
 		 */
+
+		for(int i=0; i<9; i++) {   // (9 more since 1 is alreay drawn)
+			rob.setAngle(90);
+
+			rob.move(50);
+
+
+			rob.penDown();
+
+			rob.setAngle(144);
+
+			rob.move(30);
+
+			rob.setAngle(144*2);
+
+			rob.move(30);
+
+			rob.setAngle(144*3);
+
+			rob.move(30);
+
+			rob.setAngle(144*4);
+
+			rob.move(30);
+
+			rob.setAngle(144*5);
+
+			rob.move(30);
+
+
+			rob.penUp();
+
+		}
+
+		rob.setAngle(90);
+		rob.move(100);
+
 
 	}
 
